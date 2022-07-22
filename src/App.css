@@ -1,0 +1,299 @@
+/* General CSS */
+html, body {
+  margin: 0 auto;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  background-color: var(--lightColorFull);
+  background-blend-mode: normal;
+  color: var(--darkColorFull);
+  font-size: 100%;
+  max-height: var(--mainHeight);
+  max-width: var(--mainWidth);
+  box-sizing: border-box;
+}
+
+.Header-box {
+  width: var(--mainWidth);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+}
+
+
+.rightHeading, 
+.rightHeading p,
+.leftHeading,
+.leftHeading h2 {
+  margin: 0 auto;
+}
+
+.leftHeading h2 {
+  margin-top: 16px;
+}
+
+.rightHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+}
+
+/*  hovedapplikasjon  */
+.App {
+  margin: 0 auto;
+  text-align: center;
+  height: var(--mainHeight);
+}
+
+/* topline CSS */
+.topline-sticky {
+  margin: 0 auto;
+  background-color: var(--lightColorFull);
+  color: var(--darkColorFull);
+  padding: 0; 
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 950;
+}  
+
+.topSpace {
+  margin-top: 5vh;
+}
+
+.bottomSpace {
+  margin-bottom: 10vh;
+}
+
+.topline-box {
+  margin: 0 auto;
+  background-color: var(--lightColorFull);
+  color: var(--darkColorFull);
+  width: 100%;
+  height: 18vh;
+  opacity: transparent;
+  display: flex;
+  justify-content: space-between;
+  z-index: 950;
+}
+
+.categoriesBar {
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid var(--pitchDark);
+  z-index: 150;
+}
+
+.topline-content-box {
+  padding-left: 3.5em;
+  margin: 0;
+  width: var(--toplineSideWidth);
+  height: 100%;
+  z-index: 950;
+}
+
+.left-side-box, .right-side-box {
+  background-color: transparent;
+  color: var(--darkColorFull);
+  width: var(--toplineSideWidth);
+  z-index: 950;
+}
+
+.left-side-box {
+  display: flex;
+  flex-direction:row-reverse;
+  justify-content: flex-start;
+  align-content: center;
+  padding-top: 0.5em;
+  border-radius: 0 var(--roundCorners) var(--roundCorners) 0;
+}
+
+.right-side-box {
+  border-radius: var(--roundCorners) 0 0 var(--roundCorners);
+}
+
+.menuClass {
+  margin-top: 5px;
+}
+
+.IngressRamme {
+  margin: 2em auto 8em auto;
+  padding: 0;
+  width: var(--middleSectionWidth);
+  height:fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+.blurredShadow {
+  border: 1px solid var(--darkColorFull);
+  border-radius: var(--roundCorners);
+  filter: drop-shadow(4px 3px 4px var(--darkColorFull));
+}
+
+.IngressBoks {
+  box-sizing: border-box;
+}
+
+.IngressBoks, .IngressOuter {
+  width: var(--ingressBoxWidth);
+  min-height: 15em;
+  height:fit-content;
+  background-color: var(--lightColorFull);
+  color: var(--darkColorReduced);
+  border-radius: var(--roundCorners);
+  text-overflow: clip;
+}
+
+.IngressBoks h2 {
+  font-size: clamp(1rem, 2.5vw, 2rem); 
+  margin: 0 auto;
+  padding: 1rem 0;
+}  
+
+.IngressBoks h3 {
+  font-size: clamp(0.6rem, 2vw, 1rem); 
+}  
+
+.IngressText, .IngressHeading {
+  animation-name: opacity;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  margin: 0;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ThinText {
+  font-weight: 400;
+}
+
+.detailOuter {
+  opacity: 0;
+}
+
+.detailBox, .DetailedText {
+  opacity: inherit;
+}
+
+.detailBox, .detailOuter {
+  margin: 5rem auto 0 auto;
+  padding: 0;
+  width: var(--middleSectionWidth);
+  background-color: var(--lightColorFull);
+  color: var(--darkColorReduced);
+  border-radius: var(--roundCorners);
+  z-index: 500;
+}
+
+.DetailedText {
+  font-size: 1rem;
+  color: var(--darkColorFull);
+}
+
+.DetailShow {
+  animation-name: details-Show;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition-delay: 0ms;
+  transition-duration: 350ms;
+  opacity: 1;
+}
+
+@keyframes Details-Show {
+  from {
+    font-size: 0rem;
+    max-height: 0vh;
+  }
+  to {
+    max-height:100vh;
+    font-size: 1rem;
+  }
+}
+
+.Pic-animation {
+  animation-name: opacity;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+.responsiveSmallImg {
+  position: auto;
+  margin: 15px 0px 10px 10;
+  padding-top:10px;
+  width: 8vw;
+  height: auto;
+}
+
+@media only screen and (max-width: var(--mainWidth)) {
+ 
+    .DetailedText {
+      font-size: 1.2rem;
+      padding: 1.5em;
+      }
+
+    .IngressRamme {
+      flex-direction:column-reverse;
+      justify-content: center;
+      margin: auto;
+      width: fit-content;
+    }
+    
+    .Header-box {
+      width: fit-content;
+      justify-content: center;
+    }
+  }
+
+
+.smallIcon {
+  height: 4rem;
+  stroke-width: 6px;
+  stroke: var(--warningRed);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .smallIcon {
+    animation: smallIcon-spin infinite 20s linear;
+  }
+}
+
+@keyframes smallIcon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbarLink {
+  color: var(--darkColorFull);
+}
+
+.navbarLink:hover,
+.navbarLink:active{
+  color: var(--darkColorReduced);
+  font-weight: bolder;
+
+}
