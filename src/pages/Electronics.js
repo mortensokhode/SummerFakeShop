@@ -1,6 +1,7 @@
 import React from 'react'
 import IngressBox from '../components/IngressBox'
 import FlipCard from '../components/FlipCard';
+import FakeshopAPIfetch from '../components/FakeshopAPIfetch';
 import { EMPTYOBJECT } from '../constantExports/globalConstants'
 
 const flipIngress =    {id: "1",
@@ -20,6 +21,9 @@ const Electronics = () => {
         <div className='IngressRamme'>
             <FlipCard key={flipIngress.id} card={flipIngress} />
             <FlipCard key={'2'} card={EMPTYOBJECT} />
+        </div>
+        <div className='IngressRamme'>
+          <FakeshopAPIfetch categoryNo='1' />
         </div>
 
     </>

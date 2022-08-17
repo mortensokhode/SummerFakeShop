@@ -12,7 +12,6 @@ export const FENDP_LIST_SPEC_CAT = '/products/category/'
 export const EMPTYSTRING = ''
 export const EMPTYOBJECT = {}
 export const EMPTYARRAY = []
-export const LINKCLOSE = '</Link>'
 
 /*  Object constants  */
 export const INITIALSTATE = {cleanOut: false,
@@ -36,6 +35,12 @@ export const SUMROUNDFACTOR = 100  // Faktor for avrunding til 2 desimaler
 export const IROUNDFACTOR = 100000  // Faktor for avrunding til 5 desimaler
 
 /*  Array constants */
+export const PRODUCT_CATEGORIES = ["electronics",
+                                   "jewelery",
+                                   "men's clothing",
+                                   "women's clothing"
+                                  ]
+
 // cards - array of objects is more like a list of card types handled rather than in direct use. However, the object structure is in use as such, hence the decision to
 // keep the array definition below
 export const cards = [
