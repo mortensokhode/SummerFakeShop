@@ -3,9 +3,9 @@ import IngressBox from './IngressBox'
 import DetailsBox from './DetailsBox'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const HeadSKaT = () => {
   return (
-    <div className='Header-box'>
+    <div className='HeadSKaT-box'>
         <nav className='categoriesBar'>
             <Link className="navbarLink" to="/"><h2>Home</h2></Link>
             <Link className="navbarLink" to="/electronics"><h2>Electronics</h2></Link>
@@ -51,7 +51,8 @@ const Header = () => {
   )
 };
   
-  let detailsSwitch = false;
+
+let detailsSwitch = false;
 
   function detailShow() {
       const details = document.getElementById('details')
@@ -66,5 +67,5 @@ const Header = () => {
 
 
 
-  export default Header;
+  export default HeadSKaT;
   

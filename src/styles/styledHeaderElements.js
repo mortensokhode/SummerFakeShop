@@ -32,3 +32,32 @@ export const StyledMain = styled.main`
   -webkit-backdrop-filter: blur(5px);
   border: #61dbfb solid 1px;
 `;
+
+export const StyledIngress = styled.div`
+  width: var(--ingressBoxWidth);
+  margin: 0;
+  padding: 0;
+  border-radius: var(--roundCorners);
+  color: var(--darkColorReduced);
+  background-color: var(--lightColorFull);
+  text-overflow: clip;
+  min-height: 15em;
+  height:fit-content;
+
+  border: 1px solid var(--darkColorFull);
+  box-shadow: 4px 3px 4px var(--darkColorFull);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(5px);
+`;
+
+export const StyledIngressHeader = styled.h2`
+  font-size: clamp(1rem, 2.5vw, 2rem); 
+  margin: 0 auto;
+  padding: 1rem 0;
+`;
+
+export const StyledIngressText = styled.h3`
+  font-size: clamp(0.6rem, 2vw, 1rem); 
+  text-align: left;
+  padding: 1rem;
+`;

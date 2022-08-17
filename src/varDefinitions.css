@@ -1,7 +1,7 @@
 :root {
   /*  Basic colors  */
   --lightColorFull: #f4e7d2;
-  --lightColorReduced: #f4e7d2ba;
+  --lightColorReduced: #b9ae9ca4;
   --darkColorFull: #31302c;
   --darkColorReduced: #31302cba;
   --crispyWhite: #ffffff;
@@ -15,8 +15,8 @@
   --mainWidth: 100vw;
   --mainHeight: 100vh;
   --toplineSideWidth: 10vw;
-  --middleSectionWidth: 70vw;
-  --ingressBoxWidth: 30vw;
+  --middleSectionWidth: 75vw;
+  --ingressBoxWidth: 33vw;
 
   --buttonWidth: 4vw;
   --buttonHeight: 7vh;

@@ -21,14 +21,14 @@ const DetailsBox = () => {
         <>
             <div className="detailOuter blurredShadow" id='details'>
                 <div className="detailBox" id='details'>
-                    <p className='DetailedText'>
+                    <div className='DetailedText'>
                         <span>
                             <DetailsH2line textLine={ textPackage } />
                             <br /><br />
                             <DetailsH3line textLine={ textPackage } />
                         </span><br /> <br />
                         <span>{MAIL_SIGNATURE} <br />{PHONE_SIGNATURE}</span>
-                    </p>
+                    </div>
                 </div>
             </div>
         </>

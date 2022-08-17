@@ -1,28 +1,32 @@
 import React from 'react';
-import {TEXTOBJECT} from '../constantExports/globalConstants'; 
+import { StyledIngress, StyledIngressHeader, StyledIngressText } from "../styles/styledHeaderElements";
 
 function IngressH2line({ text }) {
     return (
-        <h2 className='IngressHeading'>{text.headline}</h2>
+        <StyledIngressHeader>
+            <span className='IngressHeading'>{text}</span>
+        </StyledIngressHeader>
     )
   }
 
 function IngressH3line({ text }) {
     return (
-        <h3 className='IngressText'>{text.ingressParagraph}</h3>
+        <StyledIngressText>
+            <span className='IngressText'>{text}</span>
+        </StyledIngressText>
     )
   }
 
-const IngressBox = () => {
+  // Her bør det være mulig med rette biblioteker å lage en classnames basert betinget style-endring 
+  // spesifikt tenker jeg på backcolor slik at denne endrer seg ved flipping mellom front og bakside
+  // Kommer tilbake til det senere 
+  
+const IngressBox = ({headline, ingressText}) => {
     return (
-    <>
-        <div className='IngressOuter blurredShadow'>
-            <div className='IngressBoks'>
-                <IngressH2line text={TEXTOBJECT} />
-                <IngressH3line text={TEXTOBJECT} />
-            </div>
-        </div>
-    </>
+        <StyledIngress>
+            <IngressH2line text={headline} />
+            <IngressH3line text={ingressText} />
+        </StyledIngress>
 )
 };
 

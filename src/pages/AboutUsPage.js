@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyledMain } from "../styles/styledHeaderElements";
+import { StyledIngress } from "../styles/styledHeaderElements";
 
 const AboutUsPage = () => {
   return (
-    <StyledMain>
-      <h2>About us</h2>
-      <article>
-        <p>this is the about us page</p>
-      </article>
-    </StyledMain>
+  <div className='IngressRamme'>
+      <StyledIngress>
+        <h2>About us</h2>
+          <article>
+            <p>this is the about us page</p>
+          </article>
+      </StyledIngress>
+  </div>
   );
 };
 

@@ -10,13 +10,13 @@ import MensClothes from '../pages/MensClothes'
 import WomensClothes from '../pages/WomensClothes'
 import ErrorPage from '../pages/ErrorPage'
 import TopLine from '../components/Topline'
-import Header from '../components/Header'
+import HeadSKaT from '../components/HeadSKaT'
 
 const ToplineRoutes = () => {
   return (
     <>
       <TopLine />
-      <Header />
+      <HeadSKaT />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about-us' element={<AboutUsPage />} />
