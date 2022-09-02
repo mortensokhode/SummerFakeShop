@@ -1,37 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './varDefinitions.css';
 import './App.css';
 import './styles.scss';
 
 import TopLine from './components/Topline'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from './pages/HeadSKaT'
+import HeadSKaT from './pages/HeadSKaT'
+import ShowActualPage from './components/ShowActualPage'
 import AboutUsPage from './pages/AboutUsPage'
-import Electronics from './pages/Electronics'
-import Jewelry from './pages/Jewelry'
-import MensClothes from './pages/MensClothes'
-import WomensClothes from './pages/WomensClothes'
 import ErrorPage from './pages/ErrorPage'
+import categoriesData from "./data/categories.JSON"
 
 // Here we go..
 function App() {
+
   return (
-    <div className="App">
-        <HashRouter>
+    <>
+        <BrowserRouter>
           <TopLine />
 
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route exact path='/' element={<HeadSKaT />} />
             <Route path='/about' element={<AboutUsPage />} />
-            <Route path='/electronics' element={<Electronics />} />
-            <Route path='/jewelry' element={<Jewelry />} />
-            <Route path='/mensclothes' element={<MensClothes />} />
-            <Route path='/womensclothes' element={<WomensClothes />} />
+            <Route path='/electronics' element={<ShowActualPage productLine={"electronics"} />} />
+            <Route path='/jewelery' element={<ShowActualPage productLine={"jewelery"} />} />
+            <Route path='/mensclothes' element={<ShowActualPage productLine={"men's clothing"} />} />
+            <Route path='/womensclothes' element={<ShowActualPage productLine={"women's clothing"} />} />
             <Route path='*' element={<ErrorPage />}  />
           </Routes>
-        </HashRouter>
-    </div>
+
+        </BrowserRouter>
+    </>
   );
 }
 

@@ -1,11 +1,11 @@
 import { useState } from "react"; 
 import cn from "classnames";
 
-function FlipCard({ card }) {
+function FlipCard(props) {
   const [showBack, setShowBack] = useState(false); 
 
   function handleClick() { 
-    if (card.variant === "click") { 
+    if (props.card.variant === "click") { 
       setShowBack(!showBack); 
     } 
   } 
@@ -19,17 +19,17 @@ function FlipCard({ card }) {
       <div
         className={cn("flipcard-inner", {
           showBack, 
-          "hover-trigger": card.variant === "hover"
+          "hover-trigger": props.card.variant === "hover"
         })}>  
 
         {/* Front Side */}
         <div className="card front">
-            <span>{card.front}</span>
+            <span>{props.card.front}</span>
         </div>
 
          {/* Back Side */}
          <div className="card back">
-            <span>{card.back}</span>
+            <span>{props.card.back}</span>
         </div>
 
       </div> {/* inner div */}

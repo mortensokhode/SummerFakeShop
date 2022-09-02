@@ -1,33 +1,31 @@
 import React from 'react';
-import { StyledIngress, StyledIngressHeader, StyledIngressText } from "../styles/styledHeaderElements";
+import { StyledIngress, StyledIngressHeader, StyledIngressBody, StyledIngressDetails, StyledIngressText } from "../styles/styledHeaderElements";
 
-function IngressH2line({ text }) {
-    return (
-        <StyledIngressHeader>
-            <span className='IngressHeading'>{text}</span>
-        </StyledIngressHeader>
-    )
-  }
 
-function IngressH3line({ text }) {
-    return (
-        <StyledIngressText>
-            <span className='IngressText'>{text}</span>
-        </StyledIngressText>
-    )
-  }
-
-  // Her bør det være mulig med rette biblioteker å lage en classnames basert betinget style-endring 
-  // spesifikt tenker jeg på backcolor slik at denne endrer seg ved flipping mellom front og bakside
-  // Kommer tilbake til det senere 
-  
-const IngressBox = ({headline, ingressText}) => {
+const IngressBox = (props) => {
+    console.log("cardSide:", props.cardSide)
     return (
         <StyledIngress>
-            <IngressH2line text={headline} />
-            <IngressH3line text={ingressText} />
+            <StyledIngressHeader>{props.product.title}</StyledIngressHeader>  
+            <div className='IngressText'>
+                {(props.cardSide === "front") ? 
+                                                <StyledIngressText>
+                                                    Price: ${props.product.price}
+                                                    <img src={props.product.img} alt="Product image" className="responsiveTinyImg translate3dImage" />
+                                                </StyledIngressText>
+                                            :
+                                                <StyledIngressBody>
+                                                    Id: {props.product.id} <br />
+                                                    Description: <StyledIngressDetails>{props.product.description}</StyledIngressDetails> 
+                                                    Amount sold: {props.product.count}                    
+                                                </StyledIngressBody>
+                }
+            </div>
         </StyledIngress>
 )
 };
 
 export default IngressBox;
+// {headline, ingressText}
+
+// cardSide, {id, title, img, price, description, category, rate, count}

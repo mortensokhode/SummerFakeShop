@@ -1,10 +1,10 @@
 import React from 'react'
-import { APP_HEADING } from '../constantExports/globalConstants'
+import { TOPLINE_TEXT_OBJ } from '../constantExports/globalConstants'
 
 function LeftHeading() {
   return (
     <div className='leftHeading'>
-        <h2>{APP_HEADING}</h2>
+        <h2>{TOPLINE_TEXT_OBJ.leftText}</h2>
     </div>
   )
 }

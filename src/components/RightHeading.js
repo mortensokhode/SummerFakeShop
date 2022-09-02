@@ -1,12 +1,12 @@
 import React from 'react'
-import { APP_SUBHEADING } from '../constantExports/globalConstants'
-import BloodSucker from './BloodSucker'
+import { TOPLINE_TEXT_OBJ } from '../constantExports/globalConstants'
+import BloodSucker from '../grphcComponents/BloodSucker'
 
 function RightHeading() {
   return (
     <div className='rightHeading'>
         <BloodSucker />
-        <p className='smallSpan'>{APP_SUBHEADING}</p>
+        <p className='smallSpan'>{TOPLINE_TEXT_OBJ.rightText}</p>
     </div>
   )
 }
