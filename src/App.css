@@ -53,9 +53,13 @@ body,
   position: sticky;
 }  
 
+.noShow {
+  display: none;
+}
+
 .categoriesBar {
   margin: 0 auto;
-  width: 85%;
+  width: var(--middleSectionWidth);
 
   display: flex;
   flex-direction: row;
@@ -87,20 +91,21 @@ body,
 }
 
 .left-side-box {
-
   padding-top: 1em;
   border-radius: 0 var(--roundCorners) var(--roundCorners) 0;
 }
 
 .right-side-box {
   border-radius: var(--roundCorners) 0 0 var(--roundCorners);
+  position: relative;
+  left: 7rem;
 }
 
 .rightHeading {
   width: 60%;
   position:relative;
-  top: -4rem;
-  left: 4rem;
+  top: -5rem;
+  left: 3rem;
 
   color: var(--bloodRed);
   font-weight: bold;
@@ -113,36 +118,53 @@ body,
 }
 
 .IngressMain {
-  margin: 0 auto;
-  padding: 2em 2em;
-  height:fit-content;
+  position: relative;
   width: var(--middleSectionWidth);
+  margin: 0 auto;
+  padding: 2em 0;
 
   box-sizing: border-box;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
   justify-content: space-evenly;
+  align-content: center;
 
   z-index: 1;
 }
 
-.IngressFrame {
-  margin: 4vh auto 25vh auto;
-  padding: 2em 2em;
-  width: var(--ingressFrameWidth);
-
-  box-sizing: inherit;
-
-  z-index: 1;
+.productBoxSmall {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
 }
 
-.card:hover {
+.productBoxSmall:hover,
+.productBoxSmall:active {
   cursor: pointer;
 }
- 
+
+.returnText:hover,
+.returnText:active {
+  font-style: italic;
+}
+
+.prodBoxContentFrame {
+  width: var(--prodBoxWidth);
+  height: var(--prodBoxContentFrameHeight);
+
+  padding: 2px 0;
+  z-index: inherit;
+}
+
+.StyledIngressFootline {
+position: absolute;
+bottom: 5px;
+text-align: left;
+}
+
 .IngressText, .IngressHeading {
   animation-name: opacity;
   animation-duration: 5s;
@@ -163,15 +185,9 @@ body,
   margin: 5px;
   padding-top:5px;
 
-  position: auto;
-
-  max-width: var(--ingressImgMaxWidth);
-  width: var(--ingressImgWidth);
-  height: auto;
-}
-
-.translate3dImage {
-  transform: translate3d(calc((var(--ingressBoxWidth)/5)*3), -20px, 0);
+  max-width: var(--prodBoxImgMaxWidth);
+  max-height: var(--prodBoxImgMaxHeight);
+  /* width: calc(var(--prodBoxImgMaxWidth)*0.9); */
 }
 
 .myBat {

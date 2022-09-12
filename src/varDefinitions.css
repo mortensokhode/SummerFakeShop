@@ -19,11 +19,13 @@
   --mainBottomPadding: 7vh;
   --toplineSideWidth: 10vw;
   --middleSectionWidth: 75vw;
-  --ingressBoxWidth: 33vw;
-  --ingressMaxHeight: 20vh;
-  --ingressImgMaxWidth: 10vw;
-  --ingressImgWidth: 6vw;
-  --ingressFrameWidth: 35vw;
+
+  --prodBoxWidth: 18vw;
+  --prodBoxHeight: 40vh;
+  --prodBoxImgMaxWidth: 12vw;
+  --prodBoxImgMaxHeight: 95%;
+  --prodBoxContentFrameHeight: 46%;
+
 
   --buttonWidth: 4vw;
   --buttonHeight: 7vh;
