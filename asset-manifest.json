@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SummerFakeShop/static/css/main.c55e6766.css",
+    "main.js": "/SummerFakeShop/static/js/main.f963a88d.js",
+    "static/media/testMove.svg": "/SummerFakeShop/static/media/testMove.a306a26aa4b391e5a07cc0aebd1cef7b.svg",
+    "index.html": "/SummerFakeShop/index.html",
+    "main.c55e6766.css.map": "/SummerFakeShop/static/css/main.c55e6766.css.map",
+    "main.f963a88d.js.map": "/SummerFakeShop/static/js/main.f963a88d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c55e6766.css",
+    "static/js/main.f963a88d.js"
+  ]
+}
