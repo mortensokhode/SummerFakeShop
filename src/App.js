@@ -6,7 +6,8 @@ import './App.css';
 
 import ToplineSideHeading from './components/ToplineSideHeading';
 import HeadSKaT from './pages/HeadSKaT'
-import ShowActualPage from './components/ShowActualPage'
+// import ShowActualPage from './components/ShowActualPage'
+import ProvideProductDetails from './components/ProvideProductDetails'
 import AboutUsPage from './pages/AboutUsPage'
 import ErrorPage from './pages/ErrorPage'
 import GenerateCategories from './components/GenerateCategories'
@@ -36,11 +37,7 @@ function App() {
                 <Routes>
                     <Route exact path='/' element={<HeadSKaT />}></Route>
                     <Route path='/about' element={<AboutUsPage />}></Route>
-                    <Route path='/services/products' element={<ShowActualPage />}></Route>
-                    {/* <Route path='/electronics' element={<ShowActualPage productLine={"electronics"} />}></Route>
-                    <Route path='/jewelery' element={<ShowActualPage productLine={"jewelery"} />}></Route>
-                    <Route path='/mensclothing' element={<ShowActualPage productLine={"men's clothing"} />}></Route>
-                    <Route path='/womensclothing' element={<ShowActualPage productLine={"women's clothing"} />}></Route> */}
+                    <Route path='/services/products' element={<ProvideProductDetails />}></Route>
                     <Route path='*' element={<ErrorPage />}></Route>
                 </Routes>
             </div>

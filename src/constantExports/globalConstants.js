@@ -2,6 +2,8 @@
 export const FENDP_PRODUCTS = 'https://fakestoreapi.com/products'
 export const FENDP_SPECIFIC_CAT = '/category/'
 export const FENDP_CATEGORIES = '/categories'
+// export const APP_HOME_URL = '/SummerFakeShop' // running gh-pages
+export const APP_HOME_URL = '/' // running localhost
 
 export const EMPTYSTRING = ''
 export const EMPTYOBJECT = {}
