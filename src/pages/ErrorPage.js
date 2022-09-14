@@ -9,7 +9,7 @@ function ErrorPage() {
                  
           Click text to return.`,
     category:"noProduct",
-    image:"https://images.unsplash.com/photo-1644365977963-e96e883a8e74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGVycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+    thumbnail:"https://images.unsplash.com/photo-1644365977963-e96e883a8e74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGVycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
     rating:{rate:0,
             count:0}}
 

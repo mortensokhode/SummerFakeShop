@@ -6,11 +6,11 @@ import { StyledProductBoxSmall, StyledIngressHeader, StyledIngressFootline, Styl
 
 const ProductBoxSmall = (props) => {
     const navigate = useNavigate();
-
+    console.log('props:', props)
     return (
             <StyledProductBoxSmall className="productBoxSmall">
                 <div className="prodBoxContentFrame">
-                    <img src={props.product.image} alt="Product image" className="responsiveTinyImg" />
+                    <img src={props.product.thumbnail} alt="Product image" className="responsiveTinyImg" />
                 </div>
 
                 <div className="prodBoxContentFrame">

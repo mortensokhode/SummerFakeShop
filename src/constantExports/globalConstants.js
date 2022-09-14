@@ -1,9 +1,16 @@
 /*  Text/String constants / props  */
-export const FENDP_PRODUCTS = 'https://fakestoreapi.com/products'
+const fakeshopBaseUrl = 'dummyjson.com'
+// const fakeshopBaseUrl = 'fakestoreapi.com'
+
+export const FENDP_PRODUCTS = 'https://' + fakeshopBaseUrl + '/products'
 export const FENDP_SPECIFIC_CAT = '/category/'
 export const FENDP_CATEGORIES = '/categories'
-// export const APP_HOME_URL = '/SummerFakeShop' // running gh-pages
-export const APP_HOME_URL = '/' // running localhost
+export const CATEGORY_LIMIT = 5
+export const PRODUCT_LIMIT = 8
+export const ZERO = 0
+
+export const APP_HOME_URL = '/SummerFakeShop/' // running gh-pages
+// export const APP_HOME_URL = '/' // running localhost
 
 export const EMPTYSTRING = ''
 export const EMPTYOBJECT = {}

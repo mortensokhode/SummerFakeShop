@@ -9,14 +9,13 @@ function properCase(lowString) {
         )
     }
 
-function GenerateCategories() {
+function GenerateCategories({homeURL}) {
     
     const categoryList = categories.map((category, index) => ( 
             <Link   className="navbarLink colorSchema" 
                     key={index} 
                     state={{categoryOriginal: category , categoryName: properCase(category) }} 
-                    // to={`/${category.replace(/[^a-zA-Z]/g,"")}`}>
-                    to='/services/products'>
+                    to={`${homeURL}productLine/products`}>
                 
                 <h2>{`${category.charAt(0).toUpperCase() + category.slice(1)}`}</h2>
             </Link>

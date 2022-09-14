@@ -18,7 +18,7 @@ const aboutInfo = {id:0,
   
   Click text to return`,
   category:"noProduct",
-  image:aboutImgArr[arrIndex],
+  thumbnail:aboutImgArr[arrIndex],
   rating:{rate:0,
           count:0}}
 
